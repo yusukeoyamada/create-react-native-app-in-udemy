@@ -19,7 +19,7 @@ class MemoDetailScreen extends Component {
           <Text>講座のアイデアです！</Text>
         </View>
 
-        <CircleButton name="pencil" color="white" style={styles.editBotton} />
+        <CircleButton name="pencil" color="white" style={styles.editBotton} onPress={() => { this.props.navigation.navigate('MemoEdit'); }} />
       </View>
     );
   }
@@ -56,7 +56,6 @@ const styles = StyleSheet.create({
   },
   editBotton: {
     top: 75,
-
   },
 });
 
