@@ -20,7 +20,6 @@ class MemoEditScreen extends Component {
 
   componentWillMount(){
     const { params } = this.props.navigation.state;
-    console.log(params);
     this.setState({
       body: params.body,
       key: params.key,
@@ -62,6 +61,8 @@ class MemoEditScreen extends Component {
           onChangeText={text => {this.setState({
             body: text,
           });}}
+          textAlignVertical="top"
+          autoCapitalize="none"
         />
         <CircleBotton name="check" onPress={this.handlePress.bind(this)} />
       </View>

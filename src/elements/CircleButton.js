@@ -62,14 +62,13 @@ class CircleButton extends Component {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    bottom: 32,
-    right: 32,
-    width: 48,
-    height: 48,
+    bottom: 24,
+    right: 24,
   },
   circleButton: {
     width: 48,
     height: 48,
+    margin: 8,
     borderRadius: 24,
     alignItems: 'center',
     justifyContent: 'center',

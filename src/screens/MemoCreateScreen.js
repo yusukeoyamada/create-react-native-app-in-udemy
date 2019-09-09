@@ -26,6 +26,7 @@ class MemoCreateScreen extends Component {
     })
       .then(docRef => {
         console.log("Document written with ID: ", docRef.id);
+        this.props.navigation.goBack();
       })
       .catch(error => {
         console.error("Error adding document: ", error);
@@ -40,6 +41,8 @@ class MemoCreateScreen extends Component {
           multiline
           value={this.state.body}
           onChangeText={text => {this.setState({body: text}); }}
+          textAlignVertical="top"
+          autoCapitalize="none"
         />
         <CircleBotton name="check" onPress={this.handlePress.bind(this)} />
       </View>
